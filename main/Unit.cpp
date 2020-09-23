@@ -1,7 +1,5 @@
 #include "Unit.h"
 
-Unit::Unit(){}
-
 Unit::Unit(double value, UnitType type)
 {
     this->base_value = value;
