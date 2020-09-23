@@ -68,6 +68,13 @@ TEST(QuantityMeasurement_Test, first_object_and_second_object_ref_should_be_equa
     ASSERT_EQ(first_ref, second_ref);
 }
 
+TEST(QuantityMeasurement_Test, _INCH_first_object_and_second_object_value__when_not_equal__should_return_false)
+{
+    Unit first_feet(4, UnitType::INCH);
+    Unit second_feet(1, UnitType::INCH);
+    ASSERT_FALSE(first_feet == second_feet);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
