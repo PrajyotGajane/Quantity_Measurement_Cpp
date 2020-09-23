@@ -124,6 +124,14 @@ TEST(Yard_Comparison_Test, given_1_yard_and_3_feet_should_be_equal)
     ASSERT_EQ(result_1, result_2);
 }
 
+TEST(Centimeter_Test, given_2_inch_and_5_centimeters_should_return_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::INCH, 2.0);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::CENTIMETER, 5.0);
+    ASSERT_EQ(result_1, result_2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
