@@ -15,3 +15,4 @@ bool Unit::operator==(Unit other)
 
 Unit Unit::FEET(12.0, UnitType::FEET);
 Unit Unit::INCH(1.0, UnitType::INCH);
+Unit Unit::YARD(36.0, UnitType::LENGTH);

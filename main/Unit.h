@@ -13,4 +13,5 @@ public:
     bool operator==(UnitType);
     static Unit FEET;
     static Unit INCH;
+    static Unit YARD;
 };

@@ -75,6 +75,15 @@ TEST(QuantityMeasurement_Test, _INCH_first_object_and_second_object_value__when_
     ASSERT_FALSE(first_feet == second_feet);
 }
 
+//UC 2
+TEST(Yard_Comparison_Test, given_three_feet_and_one_yard_should_return_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result1 = quantity_measurement.getConvertedValue(Unit::FEET, 3.0);
+    double result2 = quantity_measurement.getConvertedValue(Unit::YARD, 1.0);
+    ASSERT_EQ(result1, result2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

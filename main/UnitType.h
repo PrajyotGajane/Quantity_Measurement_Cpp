@@ -4,4 +4,5 @@ enum class UnitType
 {
     FEET,
     INCH,
+    LENGTH
 };
