@@ -152,6 +152,16 @@ TEST(Add_Two_Unit_Test, given_1_feet_and_2_inch_should_equal_14_inches)
     ASSERT_EQ(expected, result);
 }
 
+TEST(Add_Two_Unit_Test, given_1_feet_and_1_feet_should_equal_24_inches)
+{
+    QuantityMeasurement quantity_measurement;
+    double value_1 = quantity_measurement.getConvertedValue(Unit::FEET, 1.0);
+    double value_2 = quantity_measurement.getConvertedValue(Unit::FEET, 1.0);
+    double result = quantity_measurement.addTwoUnits(value_1, value_2);
+    double expected = 24;
+    ASSERT_EQ(expected, result);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
