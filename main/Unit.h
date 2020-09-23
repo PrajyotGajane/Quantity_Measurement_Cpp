@@ -7,11 +7,10 @@ class Unit
 {
 public:
     Unit(double, UnitType);
-
-public:
     UnitType type;
     double base_value;
     bool operator==(Unit);
+    bool operator==(UnitType);
     static Unit FEET;
     static Unit INCH;
 };

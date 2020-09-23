@@ -41,8 +41,8 @@ TEST(QuantityMeasurement_Test, first_object_and_second_object_type_should_be_equ
 
 TEST(QuantityMeasurement_Test, first_object_and_second_object_value_should_be_equal)
 {
-    Unit first_feet(1, UnitType::LENGTH);
-    Unit second_feet(1, UnitType::LENGTH);
+    Unit first_feet(1, UnitType::FEET);
+    Unit second_feet(1, UnitType::FEET);
     ASSERT_TRUE(first_feet == second_feet);
 }
 
@@ -51,6 +51,14 @@ TEST_F(QuantityMeasurementTest, given_one_feet_and_twelve_inch_should_return_equ
     double result1 = quantity_measurement.returnCovertedValue(Unit::FEET, 1);
     double result2 = quantity_measurement.returnCovertedValue(Unit::INCH, 12);
     ASSERT_EQ(result1, result2);
+}
+
+//UC 1 for INCH
+TEST(QuantityMeasurement_Test, _first_object_and_second_object_type_should_be_equal)
+{
+    Unit first_inch(1, UnitType::INCH);
+    Unit second_inch(1, UnitType::INCH);
+    ASSERT_TRUE(first_inch == second_inch);
 }
 
 int main(int argc, char **argv)

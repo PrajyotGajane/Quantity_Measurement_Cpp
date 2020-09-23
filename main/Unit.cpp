@@ -8,10 +8,10 @@ Unit::Unit(double value, UnitType type)
 
 bool Unit::operator==(Unit other)
 {
-    if (typeid(*this) == typeid(other))
+    if(this->type == other.type)
         return (this->base_value == other.base_value);
     return false;
 }
 
-Unit Unit::FEET(12.0, UnitType::LENGTH);
-Unit Unit::INCH(1.0, UnitType::LENGTH);
+Unit Unit::FEET(12.0, UnitType::FEET);
+Unit Unit::INCH(1.0, UnitType::INCH);
