@@ -172,6 +172,14 @@ TEST(Add_Two_Unit_Test, given_2_inch_and_2_5_cm_should_equal_3_inches)
     ASSERT_EQ(expected, result);
 }
 
+TEST(Volume_Test, given_1_gallon_and_3_78_litres_should_be_equal_)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::GALLON, 1);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::LITRE, 3.78);
+    ASSERT_EQ(result_1, result_2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

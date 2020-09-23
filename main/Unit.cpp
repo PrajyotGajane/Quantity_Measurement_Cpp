@@ -17,3 +17,5 @@ Unit Unit::FEET(12.0, UnitType::FEET);
 Unit Unit::INCH(1.0, UnitType::INCH);
 Unit Unit::YARD(36.0, UnitType::LENGTH);
 Unit Unit::CENTIMETER(0.4, UnitType::LENGTH);
+Unit Unit::GALLON(3.78, UnitType::VOLUME);
+Unit Unit::LITRE(1, UnitType::VOLUME);

@@ -14,5 +14,7 @@ public:
     static Unit FEET;
     static Unit INCH;
     static Unit YARD;
-    static Unit CENTIMETER; 
+    static Unit CENTIMETER;
+    static Unit GALLON;
+    static Unit LITRE; 
 };
