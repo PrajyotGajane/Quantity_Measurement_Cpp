@@ -6,6 +6,7 @@
 class Unit
 {
 public:
+    Unit();
     Unit(double, UnitType);
     UnitType type;
     double base_value;
