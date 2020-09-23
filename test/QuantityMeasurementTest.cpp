@@ -132,6 +132,16 @@ TEST(Centimeter_Test, given_2_inch_and_5_centimeters_should_return_equal)
     ASSERT_EQ(result_1, result_2);
 }
 
+TEST(Add_Two_Unit_Test, given_two_inch_and_two_inch_should_equal_four_inches)
+{
+    QuantityMeasurement quantity_measurement;
+    double value_1 = quantity_measurement.getConvertedValue(Unit::INCH, 2.0);
+    double value_2 = quantity_measurement.getConvertedValue(Unit::INCH, 2.0);
+    double result = quantity_measurement.addTwoUnits(value_1, value_2);
+    double expected = 4;
+    ASSERT_EQ(expected, result);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
