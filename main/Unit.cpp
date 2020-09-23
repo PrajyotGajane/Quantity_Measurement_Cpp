@@ -6,4 +6,4 @@ Unit::Unit(double value, UnitType type)
     this->type = type;
 }
 
- Unit Unit::FEET(12.0, UnitType::LENGTH);
+Unit Unit::FEET(12.0, UnitType::LENGTH);

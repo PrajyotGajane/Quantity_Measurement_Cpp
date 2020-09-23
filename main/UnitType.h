@@ -1,5 +1,6 @@
 #pragma once
 
-enum class UnitType{
+enum class UnitType
+{
     LENGTH
 };

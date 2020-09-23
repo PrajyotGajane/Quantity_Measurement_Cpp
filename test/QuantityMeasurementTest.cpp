@@ -30,6 +30,13 @@ TEST(QuantityMeasurement_Test, first_object_and_second_ref_should_be_equal)
     ASSERT_EQ(first_ref, second_ref);
 }
 
+TEST(QuantityMeasurement_Test, first_object_and_second_object_type_should_be_equal)
+{
+    QuantityMeasurement first_ref;
+    QuantityMeasurement second_ref;
+    ASSERT_TRUE(first_ref == second_ref);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
