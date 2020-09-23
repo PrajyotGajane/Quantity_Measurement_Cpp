@@ -19,3 +19,4 @@ Unit Unit::YARD(36.0, UnitType::LENGTH);
 Unit Unit::CENTIMETER(0.4, UnitType::LENGTH);
 Unit Unit::GALLON(3.78, UnitType::VOLUME);
 Unit Unit::LITRE(1, UnitType::VOLUME);
+Unit Unit::MILLILITRE(0.001, UnitType::VOLUME);

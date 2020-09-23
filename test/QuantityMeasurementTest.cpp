@@ -180,6 +180,14 @@ TEST(Volume_Test, given_1_gallon_and_3_78_litres_should_be_equal_)
     ASSERT_EQ(result_1, result_2);
 }
 
+TEST(Volume_Test, given_1_litre_and_1000_millilitres_should_be_equal_)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::LITRE, 1);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::MILLILITRE, 1000);
+    ASSERT_EQ(result_1, result_2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
