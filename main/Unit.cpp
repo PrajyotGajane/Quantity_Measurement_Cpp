@@ -21,3 +21,5 @@ Unit Unit::GALLON(3.78, UnitType::VOLUME);
 Unit Unit::LITRE(1, UnitType::VOLUME);
 Unit Unit::MILLILITRE(0.001, UnitType::VOLUME);
 Unit Unit::KILOGRAM(1, UnitType::WEIGHT);
+Unit Unit::GRAM(0.001, UnitType::WEIGHT);
+Unit Unit::TONNE(1000, UnitType::WEIGHT);

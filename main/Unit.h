@@ -20,4 +20,5 @@ public:
     static Unit MILLILITRE; 
     static Unit KILOGRAM;
     static Unit GRAM;
+    static Unit TONNE;
 };
