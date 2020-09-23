@@ -92,6 +92,14 @@ TEST(Yard_Comparison_Test, given_one_feet_and_one_yard_should_return_not_equal)
     ASSERT_NE(result_1, result_2);
 }
 
+TEST(Yard_Comparison_Test, given_one_inch_and_one_yard_should_return_not_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::INCH, 1.0);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::YARD, 1.0);
+    ASSERT_NE(result_1, result_2);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
