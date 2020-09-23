@@ -216,7 +216,7 @@ TEST(Weight_Test, given_1_kg_and_1000_gm__d_should_be_equal)
     ASSERT_EQ(result_1, result_2);
 }
 
-TEST(Weight_Test, given_1_tonne_and_1000_kg__d_should_be_equal)
+TEST(Weight_Test, given_1_tonne_and_1000_kg__should_be_equal)
 {
     QuantityMeasurement quantity_measurement;
     double result_1 = quantity_measurement.getConvertedValue(Unit::TONNE, 1.0);
@@ -232,6 +232,14 @@ TEST(Volume_Test, given_1_tonne_and_1000_gm__when_added_should_return_1001_Kg)
     double result = quantity_measurement.addTwoUnits(value_1, value_2);
     double expected = 1001;
     ASSERT_EQ(expected, result);
+}
+
+TEST(Temprature_Test, given_212_Fahrenheit_and_100_Celsius__should_be_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.temperatureConversion(UnitType::FAHRENHEIT, 212);
+    double result_2 = quantity_measurement.temperatureConversion(UnitType::CELSIUS, 100);
+    ASSERT_EQ(result_1, result_2);
 }
 
 int main(int argc, char **argv)

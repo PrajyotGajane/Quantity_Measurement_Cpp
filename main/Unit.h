@@ -6,6 +6,7 @@
 class Unit
 {
 public:
+    Unit();
     Unit(double, UnitType);
     UnitType type;
     double base_value;
@@ -17,8 +18,10 @@ public:
     static Unit CENTIMETER;
     static Unit GALLON;
     static Unit LITRE;
-    static Unit MILLILITRE; 
+    static Unit MILLILITRE;
     static Unit KILOGRAM;
     static Unit GRAM;
     static Unit TONNE;
+    static Unit FAHRENHEIT;
+    static Unit CELSIUS;
 };

@@ -6,5 +6,7 @@ enum class UnitType
     INCH,
     LENGTH,
     VOLUME,
-    WEIGHT
+    WEIGHT,
+    CELSIUS,
+    FAHRENHEIT
 };

@@ -14,3 +14,13 @@ bool QuantityMeasurement::operator==(QuantityMeasurement other)
 {
     return typeid(*this) == typeid(other);
 }
+
+double QuantityMeasurement::temperatureConversion(UnitType type, double value)
+{
+    double temperature = value;
+    if (type == UnitType::CELSIUS)
+    {
+        temperature = (value * conversion_factor_one) + conversion_factor_two;
+    }
+    return temperature;
+}

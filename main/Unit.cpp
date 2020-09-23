@@ -1,5 +1,7 @@
 #include "Unit.h"
 
+Unit::Unit(){};
+
 Unit::Unit(double value, UnitType type)
 {
     this->base_value = value;
@@ -23,3 +25,5 @@ Unit Unit::MILLILITRE(0.001, UnitType::VOLUME);
 Unit Unit::KILOGRAM(1, UnitType::WEIGHT);
 Unit Unit::GRAM(0.001, UnitType::WEIGHT);
 Unit Unit::TONNE(1000, UnitType::WEIGHT);
+Unit Unit::FAHRENHEIT;
+Unit Unit::CELSIUS;
