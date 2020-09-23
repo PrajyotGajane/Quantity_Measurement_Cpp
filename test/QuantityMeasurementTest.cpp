@@ -79,9 +79,17 @@ TEST(QuantityMeasurement_Test, _INCH_first_object_and_second_object_value__when_
 TEST(Yard_Comparison_Test, given_three_feet_and_one_yard_should_return_equal)
 {
     QuantityMeasurement quantity_measurement;
-    double result1 = quantity_measurement.getConvertedValue(Unit::FEET, 3.0);
-    double result2 = quantity_measurement.getConvertedValue(Unit::YARD, 1.0);
-    ASSERT_EQ(result1, result2);
+    double result_1 = quantity_measurement.getConvertedValue(Unit::FEET, 3.0);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::YARD, 1.0);
+    ASSERT_EQ(result_1, result_2);
+}
+
+TEST(Yard_Comparison_Test, given_one_feet_and_one_yard_should_return_not_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::FEET, 1.0);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::YARD, 1.0);
+    ASSERT_NE(result_1, result_2);
 }
 
 int main(int argc, char **argv)
