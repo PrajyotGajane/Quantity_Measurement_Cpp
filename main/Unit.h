@@ -18,4 +18,6 @@ public:
     static Unit GALLON;
     static Unit LITRE;
     static Unit MILLILITRE; 
+    static Unit KILOGRAM;
+    static Unit GRAM;
 };

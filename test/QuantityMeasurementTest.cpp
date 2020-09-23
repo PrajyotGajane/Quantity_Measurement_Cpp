@@ -172,7 +172,7 @@ TEST(Add_Two_Unit_Test, given_2_inch_and_2_5_cm_should_equal_3_inches)
     ASSERT_EQ(expected, result);
 }
 
-TEST(Volume_Test, given_1_gallon_and_3_78_litres_should_be_equal_)
+TEST(Volume_Test, given_1_gallon_and_3_78_litres_should_be_equal)
 {
     QuantityMeasurement quantity_measurement;
     double result_1 = quantity_measurement.getConvertedValue(Unit::GALLON, 1);
@@ -180,7 +180,7 @@ TEST(Volume_Test, given_1_gallon_and_3_78_litres_should_be_equal_)
     ASSERT_EQ(result_1, result_2);
 }
 
-TEST(Volume_Test, given_1_litre_and_1000_millilitres_should_be_equal_)
+TEST(Volume_Test, given_1_litre_and_1000_millilitres_should_be_equal)
 {
     QuantityMeasurement quantity_measurement;
     double result_1 = quantity_measurement.getConvertedValue(Unit::LITRE, 1);
@@ -206,6 +206,14 @@ TEST(Volume_Test, given_1_litre_and_1000_millilitre__when_added_should_return_2_
     double result = quantity_measurement.addTwoUnits(value_1, value_2);
     double expected = 2;
     ASSERT_EQ(expected, result);
+}
+
+TEST(Weight_Test, given_1_kg_and_1000_gm__d_should_be_equal)
+{
+    QuantityMeasurement quantity_measurement;
+    double result_1 = quantity_measurement.getConvertedValue(Unit::LITRE, 1.0);
+    double result_2 = quantity_measurement.getConvertedValue(Unit::MILLILITRE, 1000);
+    ASSERT_EQ(result_1, result_2);
 }
 
 int main(int argc, char **argv)
