@@ -1,8 +1,17 @@
 #include <gtest/gtest.h>
+#include "../main/QuantityMeasurement.h"
 
-TEST(SomeTest, test)
+// Set up to use Quantity Measurement reference in multiple test cases
+struct QuantityMeasurementTest : testing::Test
 {
-    EXPECT_TRUE(true);
+	QuantityMeasurement quantity_measurement;
+};
+
+TEST_F(QuantityMeasurementTest, _zero_feet_and_zero_feet__should_be_equal)
+{
+    double first_value = quantity_measurement.returnCovertedValue(Unit::FEET, 0);
+    double second_value = quantity_measurement.returnCovertedValue(Unit::FEET, 0);
+    ASSERT_EQ(first_value, second_value);
 }
 
 int main(int argc, char **argv)
