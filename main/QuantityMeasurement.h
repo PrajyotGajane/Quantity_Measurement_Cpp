@@ -5,7 +5,7 @@
 class QuantityMeasurement
 {
 public:
-    double returnCovertedValue(Unit, double);
+    double getConvertedValue(Unit, double);
     bool operator==(QuantityMeasurement *);
     bool operator==(QuantityMeasurement);
 };

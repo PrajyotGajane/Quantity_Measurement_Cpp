@@ -20,8 +20,8 @@ struct QuantityMeasurementTest : testing::Test
 //UC 1
 TEST_F(QuantityMeasurementTest, _zero_feet_and_zero_feet__should_be_equal)
 {
-    double first_value = quantity_measurement.returnCovertedValue(Unit::FEET, 0);
-    double second_value = quantity_measurement.returnCovertedValue(Unit::FEET, 0);
+    double first_value = quantity_measurement.getConvertedValue(Unit::FEET, 0);
+    double second_value = quantity_measurement.getConvertedValue(Unit::FEET, 0);
     ASSERT_EQ(first_value, second_value);
 }
 
@@ -48,8 +48,8 @@ TEST(QuantityMeasurement_Test, first_object_and_second_object_value_should_be_eq
 
 TEST_F(QuantityMeasurementTest, given_one_feet_and_twelve_inch_should_return_equal)
 {
-    double result1 = quantity_measurement.returnCovertedValue(Unit::FEET, 1);
-    double result2 = quantity_measurement.returnCovertedValue(Unit::INCH, 12);
+    double result1 = quantity_measurement.getConvertedValue(Unit::FEET, 1);
+    double result2 = quantity_measurement.getConvertedValue(Unit::INCH, 12);
     ASSERT_EQ(result1, result2);
 }
 

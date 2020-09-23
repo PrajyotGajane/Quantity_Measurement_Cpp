@@ -8,7 +8,7 @@ Unit::Unit(double value, UnitType type)
 
 bool Unit::operator==(Unit other)
 {
-    if(this->type == other.type)
+    if (this->type == other.type)
         return (this->base_value == other.base_value);
     return false;
 }
