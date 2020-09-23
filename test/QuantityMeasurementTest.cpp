@@ -37,6 +37,13 @@ TEST(QuantityMeasurement_Test, first_object_and_second_object_type_should_be_equ
     ASSERT_TRUE(first_ref == second_ref);
 }
 
+TEST(QuantityMeasurement_Test, first_object_and_second_object_value_should_be_equal)
+{
+    Unit first_feet(1,UnitType::LENGTH);
+    Unit second_feet(1,UnitType::LENGTH);
+    ASSERT_TRUE(first_feet == second_feet);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

@@ -1,7 +1,6 @@
 #pragma once
 #include "Unit.h"
 #include <iostream>
-#include <typeinfo>
 
 class QuantityMeasurement
 {
